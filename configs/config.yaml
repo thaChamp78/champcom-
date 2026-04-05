@@ -1,0 +1,25 @@
+# ChampCom Configuration
+app:
+  name: ChampCom
+  version: 1.0.0
+  fullscreen: false
+  width: 1280
+  height: 720
+  theme: dark
+
+ai:
+  nodes: 3
+  autonomy: true
+  tick_rate: 2.0
+
+network:
+  host: 0.0.0.0
+  port: 7777
+  max_clients: 32
+
+media:
+  volume: 0.8
+
+logging:
+  level: INFO
+  file: logs/champcom.log

@@ -1,0 +1,3 @@
+# ChampCom - No external dependencies required!
+# Built entirely on Python standard library (tkinter)
+# Just run: python main.py
