@@ -1,6 +1,6 @@
 # ChampCom
 
-**Operating System Within an Operating System**
+**AI-Operating System Within an Operating System**
 
 A fully operational desktop environment that runs as a standalone Python application. Double-click `main.py` to launch.
 
