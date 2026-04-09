@@ -35,6 +35,11 @@ def main():
     # Load all inject batches
     from champcom.batches import load_all_batches
     load_all_batches(cc)
+    # Build the wiring graph (category hubs, runtime triad, cross-edges)
+    from champcom_wiring import build_edges, edge_count
+    build_edges(cc)
+    print(f"[BOOT] Edges built: {edge_count(cc)}")
+    print(f"[BOOT] Modules wired: {len(cc.systems)}")
     cc.run()
     return 0
 
