@@ -8,7 +8,7 @@ app:
   theme: dark
 
 ai:
-  nodes: 3
+  nodes: 5
   autonomy: true
   tick_rate: 2.0
 

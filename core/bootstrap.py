@@ -34,7 +34,7 @@ class Bootstrap:
 
         # Check tkinter
         try:
-            import tkinter
+            import tkinter  # noqa: F401
             print("  [OK] tkinter available")
         except ImportError:
             print("  [FAIL] tkinter not found - GUI will not work")

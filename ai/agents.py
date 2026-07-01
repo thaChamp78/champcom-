@@ -39,7 +39,8 @@ def create_default_agents():
     from ai.brain import AINode
     return [
         AINode("Planner", "planner"),
-        AINode("Executor", "executor"),
-        AINode("Analyzer", "analyzer"),
+        FileAgent(),
+        NetworkAgent(),
+        SystemAgent(),
         AINode("Responder", "responder"),
     ]

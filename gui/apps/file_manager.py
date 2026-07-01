@@ -2,7 +2,7 @@
 ChampCom File Manager - Browse and manage files
 """
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import messagebox
 import os
 import shutil
 import subprocess
@@ -195,8 +195,7 @@ class FileManagerApp:
     def _create_file(self, name):
         try:
             path = os.path.join(self.current_path, name)
-            with open(path, "w") as f:
-                pass
+            open(path, "w").close()
             self._refresh()
         except Exception as e:
             messagebox.showerror("Error", str(e))

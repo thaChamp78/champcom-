@@ -5,7 +5,7 @@ import time
 import threading
 
 from core.config import Config
-from core.ecs import ECS, Entity
+from core.ecs import ECS
 from core.plugin_manager import PluginManager
 from ai.brain import Brain, Autonomy
 from ai.agents import create_default_agents
@@ -61,7 +61,7 @@ class ChampComEngine:
         system_entity = self.ecs.create("system")
         self.ecs.add(system_entity, "transform", [0, 0, 0])
         self.ecs.add(system_entity, "info", {"name": "ChampCom", "type": "system"})
-        print(f"  [OK] ECS initialized")
+        print("  [OK] ECS initialized")
 
         # Setup render graph
         self.render_graph.add_pass("ui_update", lambda: None)
@@ -105,7 +105,7 @@ class ChampComEngine:
             now = time.time()
             dt = now - last
             if dt > 0.1:
-                dt = 0.033
+                dt = 0.1
             last = now
 
             # Update ECS

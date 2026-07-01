@@ -2,7 +2,7 @@
 ChampCom Settings App - System configuration interface
 """
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import messagebox
 
 
 class SettingsApp:
@@ -73,8 +73,8 @@ class SettingsApp:
         fg = "#e0e0e0"
 
         tk.Label(parent, text=label, bg=bg, fg=fg,
-                 font=("Segoe UI", 10)).grid(row=row, column=0,
-                                              sticky="w", pady=5, padx=5)
+                 font=("Segoe UI", 10)).grid(
+                     row=row, column=0, sticky="w", pady=5, padx=5)
         entry = tk.Entry(parent, bg="#0d1117", fg=fg,
                          insertbackground=fg, font=("Segoe UI", 10),
                          relief=tk.FLAT, width=30)
@@ -84,7 +84,6 @@ class SettingsApp:
 
     def _show_general(self):
         frame = self._make_section("General Settings")
-        bg = "#1a1a2e"
         fg = "#e0e0e0"
 
         self.app_name = self._make_setting(
@@ -97,7 +96,7 @@ class SettingsApp:
         tk.Button(frame, text="Save", bg="#533483", fg=fg,
                   relief=tk.FLAT, font=("Segoe UI", 10),
                   command=self._save_general, padx=20).grid(
-            row=3, column=0, columnspan=2, pady=15)
+                      row=3, column=0, columnspan=2, pady=15)
 
     def _save_general(self):
         self.config.set("app.name", self.app_name.get())
