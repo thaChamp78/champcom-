@@ -63,7 +63,7 @@ class TerminalApp:
 
     def _print_welcome(self):
         self._append(f"ChampCom Terminal v1.0 [{platform.system()}]\n", "info")
-        self._append(f"Type 'help' for available commands.\n\n", "info")
+        self._append("Type 'help' for available commands.\n\n", "info")
 
     def _append(self, text, tag=None):
         self.output.config(state=tk.NORMAL)
@@ -171,7 +171,7 @@ class TerminalApp:
             for name, node in self.engine.brain.nodes.items():
                 self._append(f"  [{node.role}] {name}\n")
         elif sub == "config":
-            self._append(f"Config data:\n")
+            self._append("Config data:\n")
             self._print_dict(self.engine.config.data, "  ")
         else:
             self._append(f"Unknown subcommand: {sub}\n", "error")

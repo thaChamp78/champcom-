@@ -34,7 +34,9 @@ class MediaPlayer:
                                  stdout=subprocess.DEVNULL,
                                  stderr=subprocess.DEVNULL)
             elif system == "Darwin":
-                subprocess.Popen(["open", path])
+                subprocess.Popen(["open", path],
+                                 stdout=subprocess.DEVNULL,
+                                 stderr=subprocess.DEVNULL)
             elif system == "Windows":
                 os.startfile(path)
         except Exception:

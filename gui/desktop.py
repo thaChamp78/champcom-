@@ -3,8 +3,6 @@ ChampCom Desktop Environment - The main OS-within-OS interface
 """
 import tkinter as tk
 from tkinter import ttk
-import time
-import os
 
 from gui.taskbar import Taskbar
 from gui.window_manager import WindowManager

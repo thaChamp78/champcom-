@@ -100,7 +100,7 @@ class ManagedWindow(tk.Toplevel):
             ph = self.desktop.root.winfo_height()
             px = self.desktop.root.winfo_x()
             py = self.desktop.root.winfo_y()
-            self.geometry(f"{pw}x{ph-40}+{px}+{py}")
+            self.geometry(f"{pw}x{ph - 40}+{px}+{py}")
             self.maximized = True
 
     def _close(self):

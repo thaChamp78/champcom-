@@ -167,6 +167,7 @@ class Taskbar:
 
     def _focus_window(self, window):
         try:
+            window.deiconify()
             window.lift()
             window.focus_set()
         except tk.TclError:

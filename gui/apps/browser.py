@@ -15,7 +15,6 @@ class BrowserApp:
         self._build_ui()
 
     def _build_ui(self):
-        bg = "#1a1a2e"
         fg = "#e0e0e0"
         accent = "#16213e"
 
@@ -129,12 +128,16 @@ class BrowserApp:
     def _back(self):
         if self.history_index > 0:
             self.history_index -= 1
-            self._open_url(self.history[self.history_index])
+            url = self.history[self.history_index]
+            self.url_var.set(url)
+            webbrowser.open(url)
 
     def _forward(self):
         if self.history_index < len(self.history) - 1:
             self.history_index += 1
-            self._open_url(self.history[self.history_index])
+            url = self.history[self.history_index]
+            self.url_var.set(url)
+            webbrowser.open(url)
 
     def _home(self):
         self.url_var.set("https://")

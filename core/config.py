@@ -31,7 +31,7 @@ class Config:
                 stack.pop()
                 indent_stack.pop()
 
-            if content.endswith(":") and ":" == content[-1]:
+            if content.endswith(":"):
                 # Section header
                 key = content[:-1].strip()
                 new_section = {}
